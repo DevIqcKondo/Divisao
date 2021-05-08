@@ -33,18 +33,16 @@ namespace Divisao
             if(d==0){
                 Console.ForegroundColor=ConsoleColor.Green;
                 Console.WriteLine("Não é possível dividir por zero.");
-                Console.ResetColor();
-
-            }if(n==0){
-                Console.ForegroundColor=ConsoleColor.Magenta;
+            } else {
+                if(n==0){
+                    Console.ForegroundColor=ConsoleColor.Magenta;
+                }else if(n>0){
+                    Console.ForegroundColor=ConsoleColor.Yellow;
+                }
                 Console.WriteLine(""+n+" dividido por "+d+" é "+f+" ");
-                Console.ResetColor();
-
-            }if(n>0){
-                Console.ForegroundColor=ConsoleColor.Yellow;
-                Console.WriteLine(""+n+" dividido por "+d+" é "+f+" ");
-                Console.ResetColor();
-            }
+            }          
+            
+            Console.ResetColor();
             Console.Beep();
         }
     }
